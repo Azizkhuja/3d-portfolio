@@ -63,6 +63,42 @@ export const clientReviews = [
 
 export const myProjects = [
   {
+    title: 'DevLogs',
+    desc: 'Explore insightful blog posts on software engineering, tech tips, and personal growth. Written by a passionate software engineer, this website shares experiences, best practices, and industry trends to inspire and empower developers',
+    subdesc: 'Tech stack: TypeScript, Next, Tailwind Sanity',
+    href: 'https://devlogs-by-azizkhuja.vercel.app/',
+    texture: '/textures/project/project4.mp4',
+    logo: '/assets/screen.jpeg',
+    logoStyle: {
+      backgroundColor: '#13202F',
+      border: '0.2px solid #36201D',
+      boxShadow: '0px 0px 60px 0px #AA3C304D',
+    },
+    spotlight: '/assets/spotlight1.png',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/assets/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TypeScript',
+        path: 'assets/typescript.png',
+      },
+      {
+        id: 3,
+        name: 'Next.js',
+        path: '/assets/nextjs.svg',
+      },
+      {
+        id: 4,
+        name: 'Sanity',
+        path: '/assets/sanity.svg',
+      },
+    ],
+  },
+  {
     title: 'Gamefy',
     desc: "In this application you can get information about last game and Minimum System Requirements information. Find & track the best free-to-play games! Track what you've played and search for what to play next!",
     subdesc: 'Tech stack: React, React-Router, Axios, Material-UI',
@@ -70,7 +106,7 @@ export const myProjects = [
     texture: '/textures/project/project1.mp4',
     logo: '/assets/project-logo1.svg',
     logoStyle: {
-      backgroundColor: '#2A1816',
+      backgroundColor: '#13202F',
       border: '0.2px solid #36201D',
       boxShadow: '0px 0px 60px 0px #AA3C304D',
     },
