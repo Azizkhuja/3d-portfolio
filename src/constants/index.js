@@ -19,6 +19,11 @@ export const navLinks = [
     name: 'Contact',
     href: '#contact',
   },
+  {
+    id: 5,
+    name: 'Blog',
+    href: 'https://devlogs-by-azizkhuja.vercel.app/',
+  },
 ];
 
 export const clientReviews = [

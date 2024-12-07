@@ -13,6 +13,11 @@ const Footer = () => {
             <img src="/assets/github.svg" alt="github" className="w-1/2 h-1/2" />
           </div>
         </a>
+        <a href="https://t.me/devlogsbyazizkhuja" target="_blank">
+          <div className="social-icon">
+            <img src="/assets/telegram.svg" alt="telegram" className="w-1/2 h-1/2" />
+          </div>
+        </a>
         <a href="https://x.com/aziz_ipro" target="_blank">
           <div className="social-icon">
             <img src="/assets/twitter.svg" alt="twitter" className="w-1/2 h-1/2" />
