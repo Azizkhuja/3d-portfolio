@@ -119,8 +119,8 @@ export const myProjects = [
       },
       {
         id: 3,
-        name: 'TypeScript',
-        path: '/assets/typescript.png',
+        name: 'Formspree',
+        path: '/assets/formspree.svg',
       },
       {
         id: 4,
