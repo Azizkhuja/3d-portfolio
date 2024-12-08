@@ -1,22 +1,37 @@
 import { useState } from 'react';
-
+import { track } from '@vercel/analytics';
 import { navLinks } from '../constants/index.js';
 
-const NavItems = ({ onClick = () => {} }) => (
-  <ul className="nav-ul">
-    {navLinks.map((item) => (
-      <li key={item.id} className="nav-li">
-        <a
-          href={item.href}
-          className="nav-li_a"
-          onClick={onClick}
-          {...(item.name.includes('Blog') ? { target: '_blank' } : {})}>
-          {item.name}
-        </a>
-      </li>
-    ))}
-  </ul>
-);
+const NavItems = ({ onClick = () => {} }) => {
+  const handleClick = (item) => {
+    // Track the event only if the item is "Blog"
+    if (item.name === 'Blog') {
+      track('nav_blog_clicked', {
+        navItemName: item.name,
+        navItemHref: item.href,
+      });
+    }
+
+    // Call the provided onClick function
+    onClick(item);
+  };
+
+  return (
+    <ul className="nav-ul">
+      {navLinks.map((item) => (
+        <li key={item.id} className="nav-li">
+          <a
+            href={item.href}
+            className="nav-li_a"
+            onClick={() => handleClick(item)}
+            {...(item.name.includes('Blog') ? { target: '_blank' } : {})}>
+            {item.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
